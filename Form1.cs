@@ -105,7 +105,7 @@ namespace PlatformerGame
             }
             //platform moving
             horizontalPlatform.Left -= horizontalSpeed;
-            if (horizontalPlatform.Left < 0 || horizontalPlatform.Left + horizontalPlatform.Width > this.ClientSize.Width)
+            if (horizontalPlatform.Left < 200 || horizontalPlatform.Left + horizontalPlatform.Width > this.ClientSize.Width)
             {
                 horizontalSpeed = -horizontalSpeed;
             }
