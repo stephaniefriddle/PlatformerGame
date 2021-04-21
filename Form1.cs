@@ -111,7 +111,7 @@ namespace PlatformerGame
             }
 
             verticalPlatform.Top += verticalSpeed;
-            if (verticalPlatform.Top < 151 || verticalPlatform.Top > 480)
+            if (verticalPlatform.Top < 181 || verticalPlatform.Top > 480)
             {
                 verticalSpeed = -verticalSpeed;
             }
