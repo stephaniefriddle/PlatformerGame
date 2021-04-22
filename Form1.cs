@@ -64,7 +64,7 @@ namespace PlatformerGame
                 //player stays on top of platform
                 if (x is PictureBox)
                 {
-                    if ((string)x.Tag == "platform")
+                    if ((string)x.Tag == "platform1")
                     {
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -92,13 +92,14 @@ namespace PlatformerGame
                     }
 
                     //enemy kills player
-                    if ((string)x.Tag == "enemy")
+                    if ((string)x.Tag == "enemy1")
                     {
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
                             gameTimer.Stop();
                             isGameOver = true;
                             txtScore.Text = "Score: " + score + Environment.NewLine + "You were killed in your journey!!";
+                            MessageBox.Show("You didn't make it! Try again." + Environment.NewLine + "Press 'Enter' to try again.");
                         }
                     }
                 }
@@ -133,14 +134,21 @@ namespace PlatformerGame
                 gameTimer.Stop();
                 isGameOver = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "You fell to your death!";
+                MessageBox.Show("You didn't make it! Try again." + Environment.NewLine + "Press 'Enter' to try again.");
             }
 
             //player gets to door
             if (player.Bounds.IntersectsWith(door.Bounds) && score == 19)
             {
-                gameTimer.Stop();
-                isGameOver = true;
-                txtScore.Text = "Score: " + score + Environment.NewLine + "You did it!";
+                isGameOver = false;
+                txtScore.Text = "Score: " + score + Environment.NewLine + "You did it!!";
+                player.Left = 12;
+                player.Top = 605;
+                goLeft = false;
+                goRight = false;
+
+                MessageBox.Show("You did it!!");
+                LoadNextLevel();
             }
             if (player.Bounds.IntersectsWith(door.Bounds) && score != 19)
             {
@@ -148,14 +156,15 @@ namespace PlatformerGame
             }
         }
 
+
         //player movement
         private void KeyIsDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.A)
             {
                 goLeft = true;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.D)
             {
                 goRight = true;
             }
@@ -167,11 +176,11 @@ namespace PlatformerGame
 
         private void KeyIsUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.A)
             {
                 goLeft = false;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.D)
             {
                 goRight = false;
             }
@@ -203,12 +212,17 @@ namespace PlatformerGame
                 {
                     x.Visible = true;
                 }
+                if ((string)x.Tag == "platform2")
+                {
+                    x.Visible = false;
+                }
+
             }
 
             //reset position of player, enemies, platforms, timer
 
             player.Left = 12;
-            player.Top = 541;
+            player.Top = 605;
             enemyOne.Left = 504;
             enemyTwo.Left = 315;
             horizontalPlatform.Left = 378;
@@ -216,7 +230,38 @@ namespace PlatformerGame
 
             gameTimer.Start();
 
+
+        }
+        private void LoadNextLevel()
+        {
+            score = 19;
+
+            txtScore.Text = "Score: " + score;
+
+            foreach (Control x in this.Controls)
+            {
+                if ((string)x.Tag == "platform1")
+                {
+                    x.Visible = false;
+                }
+                if ((string)x.Tag == "enemy1")
+                {
+                    x.Visible = false;
+                }
+                if ((string)x.Tag == "platform2")
+                {
+                    x.Visible = true;
+                }
+            }
+            enemyOne.Left = 627;
+            enemyOne.Top = 642;
+            enemyTwo.Left = 627;
+            enemyTwo.Top = 642;
+
+
+
         }
     }
 }
+
 
