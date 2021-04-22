@@ -261,7 +261,7 @@ namespace PlatformerGame
             this.enemyOne.Size = new System.Drawing.Size(15, 25);
             this.enemyOne.TabIndex = 11;
             this.enemyOne.TabStop = false;
-            this.enemyOne.Tag = "enemy";
+            this.enemyOne.Tag = "enemy1";
             // 
             // enemyTwo
             // 
@@ -273,7 +273,7 @@ namespace PlatformerGame
             this.enemyTwo.Size = new System.Drawing.Size(15, 25);
             this.enemyTwo.TabIndex = 12;
             this.enemyTwo.TabStop = false;
-            this.enemyTwo.Tag = "enemy";
+            this.enemyTwo.Tag = "enemy1";
             // 
             // pictureBox9
             // 

@@ -64,7 +64,7 @@ namespace PlatformerGame
                 //player stays on top of platform
                 if (x is PictureBox)
                 {
-                    if ((string)x.Tag == "platform1")
+                    if ((string)x.Tag == "platform1" || (string)x.Tag == "platform2")
                     {
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -223,10 +223,18 @@ namespace PlatformerGame
 
             player.Left = 12;
             player.Top = 605;
-            enemyOne.Left = 504;
-            enemyTwo.Left = 315;
-            horizontalPlatform.Left = 378;
-            verticalPlatform.Top = 349;
+            pictureBox1.Location = new System.Drawing.Point(0, 632);
+            pictureBox2.Location = new System.Drawing.Point(333, 537);
+            pictureBox3.Location = new System.Drawing.Point(196, 428);
+            verticalPlatform.Location = new System.Drawing.Point(11, 480);
+            pictureBox5.Location = new System.Drawing.Point(187, 258);
+            pictureBox6.Location = new System.Drawing.Point(0, 42);
+            pictureBox7.Location = new System.Drawing.Point(264, 203);
+            horizontalPlatform.Location = new System.Drawing.Point(378, 108);
+            enemyOne.Location = new System.Drawing.Point(457, 511);
+            enemyTwo.Location = new System.Drawing.Point(315, 177);
+
+
 
             gameTimer.Start();
 
@@ -242,24 +250,21 @@ namespace PlatformerGame
             {
                 if ((string)x.Tag == "platform1")
                 {
-                    x.Visible = false;
+                    //x.Visible = false;
+                    x.Left = 661;
+                    x.Top = 0;
                 }
                 if ((string)x.Tag == "enemy1")
                 {
                     x.Visible = false;
+                    x.Left = 661;
+                    x.Top = 0;
                 }
                 if ((string)x.Tag == "platform2")
                 {
                     x.Visible = true;
                 }
             }
-            enemyOne.Left = 627;
-            enemyOne.Top = 642;
-            enemyTwo.Left = 627;
-            enemyTwo.Top = 642;
-
-
-
         }
     }
 }
