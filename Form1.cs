@@ -265,6 +265,8 @@ namespace PlatformerGame
                     x.Visible = true;
                 }
             }
+
+
         }
     }
 }
