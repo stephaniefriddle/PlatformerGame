@@ -51,12 +51,12 @@ namespace PlatformerGame
             }
             if (jumping == true)
             {
-                jumpSpeed = -8;
+                jumpSpeed = -10;
                 force -= 1;
             }
             else
             {
-                jumpSpeed = 10;
+                jumpSpeed = 12;
             }
 
             foreach (Control x in this.Controls)
@@ -72,7 +72,8 @@ namespace PlatformerGame
                             player.Top = x.Top - player.Height;
 
                             //moves player with moving platform
-                            if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false)
+                            if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false
+                                || (string)x.Name == "horizontalPlatform2" && goLeft == false || (string)x.Name == "horizontalPlatform2" && goRight == false)
                             {
                                 player.Left -= horizontalSpeed;
                             }
@@ -116,6 +117,7 @@ namespace PlatformerGame
             {
                 verticalSpeed = -verticalSpeed;
             }
+
             //enemy moving
             enemyOne.Left += enemyOneSpeed;
             if (enemyOne.Left < pictureBox2.Left || enemyOne.Left + enemyOne.Width > pictureBox2.Left + pictureBox2.Width)
@@ -234,16 +236,12 @@ namespace PlatformerGame
             enemyOne.Location = new System.Drawing.Point(457, 511);
             enemyTwo.Location = new System.Drawing.Point(315, 177);
 
-
-
             gameTimer.Start();
-
-
         }
         private void LoadNextLevel()
         {
             score = 19;
-
+            this.Text = "Platformer Game Level 2";
             txtScore.Text = "Score: " + score;
 
             foreach (Control x in this.Controls)
@@ -264,6 +262,38 @@ namespace PlatformerGame
                 {
                     x.Visible = true;
                 }
+            }
+            //set level 2 platform locations
+            this.pictureBox4.Location = new System.Drawing.Point(0, 632);
+            this.pictureBox8.Location = new System.Drawing.Point(294, 546);
+            this.pictureBox13.Location = new System.Drawing.Point(411, 474);
+            this.verticalPlatform3.Location = new System.Drawing.Point(548, 438);
+            this.pictureBox29.Location = new System.Drawing.Point(311, 202);
+            this.pictureBox31.Location = new System.Drawing.Point(276, 319);
+            this.pictureBox32.Location = new System.Drawing.Point(72, 235);
+            this.pictureBox33.Location = new System.Drawing.Point(0, 42);
+            this.horizontalPlatform2.Location = new System.Drawing.Point(337, 102);
+            this.verticalPlatform2.Location = new System.Drawing.Point(26, 469);
+            this.pictureBox37.Location = new System.Drawing.Point(162, 65);
+            this.pictureBox38.Location = new System.Drawing.Point(432, 166);
+
+            //platform moving
+            horizontalPlatform2.Left -= horizontalSpeed;
+            if (horizontalPlatform2.Left < 337 || horizontalPlatform2.Left + horizontalPlatform2.Width > this.ClientSize.Width)
+            {
+                horizontalSpeed = -horizontalSpeed;
+            }
+
+            verticalPlatform2.Top += verticalSpeed;
+            if (verticalPlatform2.Top < 298 || verticalPlatform2.Top > 495)
+            {
+                verticalSpeed = -verticalSpeed;
+            }
+
+            verticalPlatform3.Top += verticalSpeed;
+            if (verticalPlatform3.Top < 618 || verticalPlatform3.Top > 167)
+            {
+                verticalSpeed = -verticalSpeed;
             }
 
 
