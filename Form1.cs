@@ -211,19 +211,11 @@ namespace PlatformerGame
                 }
             }
 
-
-
             //reset position of player, enemies, platforms, timer
 
             player.Left = 12;
             player.Top = 605;
-            pictureBox1.Location = new System.Drawing.Point(0, 632);
-            pictureBox2.Location = new System.Drawing.Point(333, 537);
-            pictureBox3.Location = new System.Drawing.Point(196, 428);
             verticalPlatform.Location = new System.Drawing.Point(11, 480);
-            pictureBox5.Location = new System.Drawing.Point(187, 258);
-            pictureBox6.Location = new System.Drawing.Point(0, 42);
-            pictureBox7.Location = new System.Drawing.Point(264, 203);
             horizontalPlatform.Location = new System.Drawing.Point(378, 108);
             enemyOne.Location = new System.Drawing.Point(457, 511);
             enemyTwo.Location = new System.Drawing.Point(315, 177);
@@ -233,11 +225,9 @@ namespace PlatformerGame
         private void LoadNextLevel()
         {
             Form2 levelTwo = new Form2();
-            levelTwo.Show();
-            levelTwo.Activate();
-            //Environment.Exit(0);
-            //this.Hide();
-            //this.Close();
+            this.Hide();
+            levelTwo.ShowDialog();
+            this.Close();
 
         }
     }

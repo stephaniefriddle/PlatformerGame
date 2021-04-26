@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace PlatformerGame
 {
+
     public partial class Form2 : Form
     {
         bool goLeft, goRight, jumping, isGameOver;
@@ -32,10 +33,11 @@ namespace PlatformerGame
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
             txtScore.Text = "Score: " + score;
+            MessageBox.Show("Level 2");
             jumping = false;
             goLeft = false;
             goRight = false;
-            isGameOver = false;
+            //isGameOver = false;
 
             player.Top += jumpSpeed;
             //gameTimer.Start();
@@ -224,10 +226,10 @@ namespace PlatformerGame
 
             txtScore.Text = "Score: " + score;
 
-            //Form1 levelOne = new Form1();
-            //levelOne.Show();
-            //this.Hide();
-            //Close();
+            Form1 levelOne = new Form1();
+            this.Hide();
+            levelOne.ShowDialog();
+            this.Close();
 
         }
     }
