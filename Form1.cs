@@ -212,7 +212,6 @@ namespace PlatformerGame
             }
 
             //reset position of player, enemies, platforms, timer
-
             player.Left = 12;
             player.Top = 605;
             verticalPlatform.Location = new System.Drawing.Point(11, 480);

@@ -34,13 +34,8 @@ namespace PlatformerGame
         {
             txtScore.Text = "Score: " + score;
             MessageBox.Show("Level 2");
-            jumping = false;
-            goLeft = false;
-            goRight = false;
-            //isGameOver = false;
 
             player.Top += jumpSpeed;
-            //gameTimer.Start();
 
             //movement
             if (goLeft == true)
@@ -87,6 +82,7 @@ namespace PlatformerGame
 
                         x.BringToFront();
                     }
+
                     //makes coin invisible once player moves over it
                     if ((string)x.Tag == "coin")
                     {
@@ -160,10 +156,9 @@ namespace PlatformerGame
             //player gets to door
             if (player.Bounds.IntersectsWith(door.Bounds) && score == 38)
             {
+                gameTimer.Stop();
                 isGameOver = true;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "You did it!!";
-                player.Left = 12;
-                player.Top = 605;
                 goLeft = false;
                 goRight = false;
 
