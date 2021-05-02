@@ -139,7 +139,7 @@ namespace PlatformerGame
             this.pictureBox1.Size = new System.Drawing.Size(372, 31);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Tag = "platform1";
+            this.pictureBox1.Tag = "platform";
             // 
             // pictureBox2
             // 
@@ -151,7 +151,7 @@ namespace PlatformerGame
             this.pictureBox2.Size = new System.Drawing.Size(250, 30);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Tag = "platform1";
+            this.pictureBox2.Tag = "platform";
             // 
             // pictureBox3
             // 
@@ -163,7 +163,7 @@ namespace PlatformerGame
             this.pictureBox3.Size = new System.Drawing.Size(112, 30);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Tag = "platform1";
+            this.pictureBox3.Tag = "platform";
             // 
             // verticalPlatform
             // 
@@ -175,7 +175,7 @@ namespace PlatformerGame
             this.verticalPlatform.Size = new System.Drawing.Size(141, 30);
             this.verticalPlatform.TabIndex = 4;
             this.verticalPlatform.TabStop = false;
-            this.verticalPlatform.Tag = "platform1";
+            this.verticalPlatform.Tag = "platform";
             // 
             // pictureBox5
             // 
@@ -187,7 +187,7 @@ namespace PlatformerGame
             this.pictureBox5.Size = new System.Drawing.Size(44, 30);
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.Tag = "platform1";
+            this.pictureBox5.Tag = "platform";
             // 
             // pictureBox6
             // 
@@ -199,7 +199,7 @@ namespace PlatformerGame
             this.pictureBox6.Size = new System.Drawing.Size(202, 30);
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "platform1";
+            this.pictureBox6.Tag = "platform";
             // 
             // pictureBox7
             // 
@@ -211,7 +211,7 @@ namespace PlatformerGame
             this.pictureBox7.Size = new System.Drawing.Size(159, 30);
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
-            this.pictureBox7.Tag = "platform1";
+            this.pictureBox7.Tag = "platform";
             // 
             // horizontalPlatform
             // 
@@ -223,7 +223,7 @@ namespace PlatformerGame
             this.horizontalPlatform.Size = new System.Drawing.Size(232, 30);
             this.horizontalPlatform.TabIndex = 8;
             this.horizontalPlatform.TabStop = false;
-            this.horizontalPlatform.Tag = "platform1";
+            this.horizontalPlatform.Tag = "platform";
             // 
             // player
             // 
@@ -696,6 +696,7 @@ namespace PlatformerGame
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Platform Game Level 1";
+            this.Load += new System.EventHandler(this.MainGameTimerEvent);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyIsUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
