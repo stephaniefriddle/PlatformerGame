@@ -37,15 +37,14 @@ namespace PlatformerGame
             this.horizontalPlatformTwo = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.verticalPlatform = new System.Windows.Forms.PictureBox();
+            this.horizontalPlatformOne = new System.Windows.Forms.PictureBox();
+            this.verticalPlatformOne = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.door = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.horizontalPlatform = new System.Windows.Forms.PictureBox();
             this.player = new System.Windows.Forms.PictureBox();
             this.enemyOne = new System.Windows.Forms.PictureBox();
             this.enemyThree = new System.Windows.Forms.PictureBox();
@@ -65,31 +64,30 @@ namespace PlatformerGame
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
             this.pictureBox34 = new System.Windows.Forms.PictureBox();
             this.pictureBox35 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox36 = new System.Windows.Forms.PictureBox();
             this.pictureBox37 = new System.Windows.Forms.PictureBox();
             this.pictureBox38 = new System.Windows.Forms.PictureBox();
             this.txtScore = new System.Windows.Forms.Label();
             this.gameTimer = new System.Windows.Forms.Timer(this.components);
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatformTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatformOne)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verticalPlatformOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyThree)).BeginInit();
@@ -109,14 +107,14 @@ namespace PlatformerGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox31
@@ -148,9 +146,9 @@ namespace PlatformerGame
             this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(374, 456);
+            this.pictureBox2.Location = new System.Drawing.Point(337, 456);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(131, 30);
+            this.pictureBox2.Size = new System.Drawing.Size(168, 30);
             this.pictureBox2.TabIndex = 43;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "platform";
@@ -184,36 +182,36 @@ namespace PlatformerGame
             this.pictureBox5.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 292);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 308);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(131, 30);
             this.pictureBox5.TabIndex = 46;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "platform";
             // 
-            // pictureBox6
+            // horizontalPlatformOne
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(95, 212);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(206, 30);
-            this.pictureBox6.TabIndex = 47;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Tag = "platform";
+            this.horizontalPlatformOne.BackColor = System.Drawing.Color.Maroon;
+            this.horizontalPlatformOne.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("horizontalPlatformOne.BackgroundImage")));
+            this.horizontalPlatformOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.horizontalPlatformOne.Location = new System.Drawing.Point(388, 188);
+            this.horizontalPlatformOne.Name = "horizontalPlatformOne";
+            this.horizontalPlatformOne.Size = new System.Drawing.Size(117, 30);
+            this.horizontalPlatformOne.TabIndex = 47;
+            this.horizontalPlatformOne.TabStop = false;
+            this.horizontalPlatformOne.Tag = "platform";
             // 
-            // verticalPlatform
+            // verticalPlatformOne
             // 
-            this.verticalPlatform.BackColor = System.Drawing.Color.Maroon;
-            this.verticalPlatform.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("verticalPlatform.BackgroundImage")));
-            this.verticalPlatform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.verticalPlatform.Location = new System.Drawing.Point(742, 374);
-            this.verticalPlatform.Name = "verticalPlatform";
-            this.verticalPlatform.Size = new System.Drawing.Size(96, 30);
-            this.verticalPlatform.TabIndex = 48;
-            this.verticalPlatform.TabStop = false;
-            this.verticalPlatform.Tag = "platform";
+            this.verticalPlatformOne.BackColor = System.Drawing.Color.Maroon;
+            this.verticalPlatformOne.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("verticalPlatformOne.BackgroundImage")));
+            this.verticalPlatformOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.verticalPlatformOne.Location = new System.Drawing.Point(742, 511);
+            this.verticalPlatformOne.Name = "verticalPlatformOne";
+            this.verticalPlatformOne.Size = new System.Drawing.Size(96, 30);
+            this.verticalPlatformOne.TabIndex = 48;
+            this.verticalPlatformOne.TabStop = false;
+            this.verticalPlatformOne.Tag = "platform";
             // 
             // pictureBox8
             // 
@@ -244,9 +242,9 @@ namespace PlatformerGame
             this.pictureBox10.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox10.BackgroundImage")));
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(598, 139);
+            this.pictureBox10.Location = new System.Drawing.Point(517, 139);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(46, 30);
+            this.pictureBox10.Size = new System.Drawing.Size(127, 30);
             this.pictureBox10.TabIndex = 51;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Tag = "platform";
@@ -279,24 +277,12 @@ namespace PlatformerGame
             this.pictureBox12.BackColor = System.Drawing.Color.Maroon;
             this.pictureBox12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox12.BackgroundImage")));
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(0, 68);
+            this.pictureBox12.Location = new System.Drawing.Point(0, 61);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(271, 30);
+            this.pictureBox12.Size = new System.Drawing.Size(232, 30);
             this.pictureBox12.TabIndex = 54;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Tag = "platform";
-            // 
-            // horizontalPlatform
-            // 
-            this.horizontalPlatform.BackColor = System.Drawing.Color.Maroon;
-            this.horizontalPlatform.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("horizontalPlatform.BackgroundImage")));
-            this.horizontalPlatform.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.horizontalPlatform.Location = new System.Drawing.Point(343, 139);
-            this.horizontalPlatform.Name = "horizontalPlatform";
-            this.horizontalPlatform.Size = new System.Drawing.Size(96, 30);
-            this.horizontalPlatform.TabIndex = 55;
-            this.horizontalPlatform.TabStop = false;
-            this.horizontalPlatform.Tag = "platform";
             // 
             // player
             // 
@@ -314,7 +300,7 @@ namespace PlatformerGame
             this.enemyOne.BackColor = System.Drawing.Color.Tomato;
             this.enemyOne.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemyOne.BackgroundImage")));
             this.enemyOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.enemyOne.Location = new System.Drawing.Point(217, 43);
+            this.enemyOne.Location = new System.Drawing.Point(164, 36);
             this.enemyOne.Name = "enemyOne";
             this.enemyOne.Size = new System.Drawing.Size(15, 25);
             this.enemyOne.TabIndex = 57;
@@ -338,7 +324,7 @@ namespace PlatformerGame
             this.enemyTwo.BackColor = System.Drawing.Color.Tomato;
             this.enemyTwo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("enemyTwo.BackgroundImage")));
             this.enemyTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.enemyTwo.Location = new System.Drawing.Point(63, 267);
+            this.enemyTwo.Location = new System.Drawing.Point(63, 283);
             this.enemyTwo.Name = "enemyTwo";
             this.enemyTwo.Size = new System.Drawing.Size(15, 25);
             this.enemyTwo.TabIndex = 59;
@@ -362,7 +348,7 @@ namespace PlatformerGame
             this.pictureBox17.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox17.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox17.BackgroundImage")));
             this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox17.Location = new System.Drawing.Point(128, 174);
+            this.pictureBox17.Location = new System.Drawing.Point(302, 59);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(15, 20);
             this.pictureBox17.TabIndex = 61;
@@ -374,7 +360,7 @@ namespace PlatformerGame
             this.pictureBox18.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox18.BackgroundImage")));
             this.pictureBox18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox18.Location = new System.Drawing.Point(168, 174);
+            this.pictureBox18.Location = new System.Drawing.Point(168, 158);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(15, 20);
             this.pictureBox18.TabIndex = 62;
@@ -386,7 +372,7 @@ namespace PlatformerGame
             this.pictureBox19.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox19.BackgroundImage")));
             this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox19.Location = new System.Drawing.Point(205, 174);
+            this.pictureBox19.Location = new System.Drawing.Point(205, 158);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(15, 20);
             this.pictureBox19.TabIndex = 63;
@@ -398,7 +384,7 @@ namespace PlatformerGame
             this.pictureBox20.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox20.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox20.BackgroundImage")));
             this.pictureBox20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox20.Location = new System.Drawing.Point(240, 174);
+            this.pictureBox20.Location = new System.Drawing.Point(130, 158);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(15, 20);
             this.pictureBox20.TabIndex = 64;
@@ -410,7 +396,7 @@ namespace PlatformerGame
             this.pictureBox22.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox22.BackgroundImage")));
             this.pictureBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox22.Location = new System.Drawing.Point(95, 257);
+            this.pictureBox22.Location = new System.Drawing.Point(95, 273);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(15, 20);
             this.pictureBox22.TabIndex = 66;
@@ -422,7 +408,7 @@ namespace PlatformerGame
             this.pictureBox23.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox23.BackgroundImage")));
             this.pictureBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox23.Location = new System.Drawing.Point(42, 257);
+            this.pictureBox23.Location = new System.Drawing.Point(42, 273);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(15, 20);
             this.pictureBox23.TabIndex = 67;
@@ -518,31 +504,19 @@ namespace PlatformerGame
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox32.BackgroundImage = global::PlatformerGame.Properties.Resources.coinMountain;
             this.pictureBox32.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox32.Location = new System.Drawing.Point(168, 360);
+            this.pictureBox32.Location = new System.Drawing.Point(172, 360);
             this.pictureBox32.Name = "pictureBox32";
             this.pictureBox32.Size = new System.Drawing.Size(15, 20);
             this.pictureBox32.TabIndex = 75;
             this.pictureBox32.TabStop = false;
             this.pictureBox32.Tag = "coin";
             // 
-            // pictureBox33
-            // 
-            this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox33.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox33.BackgroundImage")));
-            this.pictureBox33.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox33.Location = new System.Drawing.Point(42, 33);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(15, 20);
-            this.pictureBox33.TabIndex = 76;
-            this.pictureBox33.TabStop = false;
-            this.pictureBox33.Tag = "coin";
-            // 
             // pictureBox34
             // 
             this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox34.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox34.BackgroundImage")));
             this.pictureBox34.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox34.Location = new System.Drawing.Point(86, 33);
+            this.pictureBox34.Location = new System.Drawing.Point(86, 26);
             this.pictureBox34.Name = "pictureBox34";
             this.pictureBox34.Size = new System.Drawing.Size(15, 20);
             this.pictureBox34.TabIndex = 77;
@@ -554,36 +528,12 @@ namespace PlatformerGame
             this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox35.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox35.BackgroundImage")));
             this.pictureBox35.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox35.Location = new System.Drawing.Point(128, 33);
+            this.pictureBox35.Location = new System.Drawing.Point(123, 26);
             this.pictureBox35.Name = "pictureBox35";
             this.pictureBox35.Size = new System.Drawing.Size(15, 20);
             this.pictureBox35.TabIndex = 78;
             this.pictureBox35.TabStop = false;
             this.pictureBox35.Tag = "coin";
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox21.BackgroundImage")));
-            this.pictureBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox21.Location = new System.Drawing.Point(374, 113);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(15, 20);
-            this.pictureBox21.TabIndex = 79;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Tag = "coin";
-            // 
-            // pictureBox36
-            // 
-            this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox36.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox36.BackgroundImage")));
-            this.pictureBox36.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox36.Location = new System.Drawing.Point(678, 68);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(15, 20);
-            this.pictureBox36.TabIndex = 80;
-            this.pictureBox36.TabStop = false;
-            this.pictureBox36.Tag = "coin";
             // 
             // pictureBox37
             // 
@@ -625,6 +575,7 @@ namespace PlatformerGame
             // 
             this.gameTimer.Enabled = true;
             this.gameTimer.Interval = 20;
+            this.gameTimer.Tick += new System.EventHandler(this.MainGameTimerEvent);
             // 
             // pictureBox3
             // 
@@ -638,6 +589,42 @@ namespace PlatformerGame
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "coin";
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(587, 108);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(15, 20);
+            this.pictureBox6.TabIndex = 86;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "coin";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(554, 108);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(15, 20);
+            this.pictureBox7.TabIndex = 85;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "coin";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Maroon;
+            this.pictureBox13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox13.BackgroundImage")));
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(288, 92);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(45, 30);
+            this.pictureBox13.TabIndex = 87;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.Tag = "platform";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,15 +632,15 @@ namespace PlatformerGame
             this.BackgroundImage = global::PlatformerGame.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(868, 569);
+            this.Controls.Add(this.pictureBox17);
+            this.Controls.Add(this.pictureBox13);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.pictureBox38);
             this.Controls.Add(this.pictureBox37);
-            this.Controls.Add(this.pictureBox36);
-            this.Controls.Add(this.pictureBox21);
             this.Controls.Add(this.pictureBox35);
             this.Controls.Add(this.pictureBox34);
-            this.Controls.Add(this.pictureBox33);
             this.Controls.Add(this.pictureBox32);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox29);
@@ -667,27 +654,26 @@ namespace PlatformerGame
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
             this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox17);
             this.Controls.Add(this.enemyFour);
             this.Controls.Add(this.enemyTwo);
             this.Controls.Add(this.enemyThree);
             this.Controls.Add(this.enemyOne);
             this.Controls.Add(this.player);
-            this.Controls.Add(this.horizontalPlatform);
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.door);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.verticalPlatform);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.verticalPlatformOne);
+            this.Controls.Add(this.horizontalPlatformOne);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.horizontalPlatformTwo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox31);
+            this.Controls.Add(this.txtScore);
             this.DoubleBuffered = true;
             this.Name = "Form2";
             this.Text = "Platform Game Level 2";
@@ -700,15 +686,14 @@ namespace PlatformerGame
             ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatformTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.verticalPlatform)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatformOne)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.verticalPlatformOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.door)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.horizontalPlatform)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyThree)).EndInit();
@@ -728,14 +713,14 @@ namespace PlatformerGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -748,15 +733,14 @@ namespace PlatformerGame
         private System.Windows.Forms.PictureBox horizontalPlatformTwo;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox verticalPlatform;
+        private System.Windows.Forms.PictureBox verticalPlatformOne;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox door;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox horizontalPlatform;
+        private System.Windows.Forms.PictureBox horizontalPlatformOne;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox enemyOne;
         private System.Windows.Forms.PictureBox enemyThree;
@@ -776,15 +760,15 @@ namespace PlatformerGame
         private System.Windows.Forms.PictureBox pictureBox29;
         private System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.PictureBox pictureBox33;
         private System.Windows.Forms.PictureBox pictureBox34;
         private System.Windows.Forms.PictureBox pictureBox35;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox36;
         private System.Windows.Forms.PictureBox pictureBox37;
         private System.Windows.Forms.PictureBox pictureBox38;
         private System.Windows.Forms.Label txtScore;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox13;
     }
 }

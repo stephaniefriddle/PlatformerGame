@@ -12,7 +12,6 @@ namespace PlatformerGame
 {
     public partial class Form1 : Form
     {
-
         bool goLeft, goRight, jumping, isGameOver;
 
         int jumpSpeed;
@@ -27,6 +26,7 @@ namespace PlatformerGame
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("Use the arrow keys or 'a' and 'd' to move the player to collect all the coins. Avoid the enemies and reach the door to win!");
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
@@ -62,7 +62,7 @@ namespace PlatformerGame
                 //player stays on top of platform
                 if (x is PictureBox)
                 {
-                    if ((string)x.Tag == "platform1" || (string)x.Tag == "platform2")
+                    if ((string)x.Tag == "platform")
                     {
                         if (player.Bounds.IntersectsWith(x.Bounds))
                         {
@@ -70,8 +70,7 @@ namespace PlatformerGame
                             player.Top = x.Top - player.Height;
 
                             //moves player with moving platform
-                            if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false
-                                || (string)x.Name == "horizontalPlatform2" && goLeft == false || (string)x.Name == "horizontalPlatform2" && goRight == false)
+                            if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false)
                             {
                                 player.Left -= horizontalSpeed;
                             }
@@ -143,7 +142,6 @@ namespace PlatformerGame
                 gameTimer.Stop();
                 isGameOver = false;
                 txtScore.Text = "Score: " + score + Environment.NewLine + "You did it!!";
-                MessageBox.Show("You did it!!");
                 LoadNextLevel();
             }
             if (player.Bounds.IntersectsWith(door.Bounds) && score != 19)

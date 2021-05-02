@@ -28,12 +28,12 @@ namespace PlatformerGame
         public Form2()
         {
             InitializeComponent();
+            MessageBox.Show("Level 2");
         }
 
         private void MainGameTimerEvent(object sender, EventArgs e)
         {
             txtScore.Text = "Score: " + score;
-            MessageBox.Show("Level 2");
 
             player.Top += jumpSpeed;
 
@@ -73,8 +73,7 @@ namespace PlatformerGame
                             player.Top = x.Top - player.Height;
 
                             //moves player with moving platform
-                            if ((string)x.Name == "horizontalPlatform" && goLeft == false || (string)x.Name == "horizontalPlatform" && goRight == false
-                                || (string)x.Name == "horizontalPlatformTwo" && goLeft == false || (string)x.Name == "horizontalPlatformTwo" && goRight == false)
+                            if ((string)x.Name == "horizontalPlatformOne" && goLeft == false || (string)x.Name == "horizontalPlatformOne" && goRight == false)
                             {
                                 player.Left -= horizontalSpeed;
                             }
@@ -107,21 +106,14 @@ namespace PlatformerGame
                 }
             }
             //platform moving
-            horizontalPlatform.Left -= horizontalSpeed;
-            if (horizontalPlatform.Left < 315 || horizontalPlatform.Left > 461)
+            horizontalPlatformOne.Left -= horizontalSpeed;
+            if (horizontalPlatformOne.Left > 388 || horizontalPlatformOne.Left < 0)
             {
                 horizontalSpeed = -horizontalSpeed;
             }
 
-            horizontalPlatformTwo.Left -= horizontalSpeed;
-            if (horizontalPlatformTwo.Left < 449 || horizontalPlatformTwo.Left > 607)
-            {
-                horizontalSpeed = -horizontalSpeed;
-            }
-
-
-            verticalPlatform.Top += verticalSpeed;
-            if (verticalPlatform.Top < 512 || verticalPlatform.Top > 180)
+            verticalPlatformOne.Top += verticalSpeed;
+            if (verticalPlatformOne.Top < 180 || verticalPlatformOne.Top > 512)
             {
                 verticalSpeed = -verticalSpeed;
             }
@@ -138,7 +130,7 @@ namespace PlatformerGame
                 enemyTwoSpeed = -enemyTwoSpeed;
             }
             enemyThree.Left += enemyThreeSpeed;
-            if (enemyTwo.Left < pictureBox2.Left || enemyTwo.Left + enemyTwo.Width > pictureBox2.Left + pictureBox2.Width)
+            if (enemyThree.Left < pictureBox2.Left || enemyThree.Left + enemyThree.Width > pictureBox2.Left + pictureBox2.Width)
             {
                 enemyThreeSpeed = -enemyThreeSpeed;
             }
@@ -154,7 +146,7 @@ namespace PlatformerGame
             }
 
             //player gets to door
-            if (player.Bounds.IntersectsWith(door.Bounds) && score == 38)
+            if (player.Bounds.IntersectsWith(door.Bounds) && score == 40)
             {
                 gameTimer.Stop();
                 isGameOver = true;
@@ -165,7 +157,7 @@ namespace PlatformerGame
                 MessageBox.Show("You win!!");
             }
 
-            if (player.Bounds.IntersectsWith(door.Bounds) && score != 38)
+            if (player.Bounds.IntersectsWith(door.Bounds) && score != 40)
             {
                 txtScore.Text = "Score: " + score + Environment.NewLine + "Collect all the coins";
             }
@@ -217,15 +209,28 @@ namespace PlatformerGame
             goLeft = false;
             goRight = false;
             isGameOver = false;
-            score = 0;
+            score = 19;
 
             txtScore.Text = "Score: " + score;
 
-            Form1 levelOne = new Form1();
-            this.Hide();
-            levelOne.ShowDialog();
-            this.Close();
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && x.Visible == false)
+                {
+                    x.Visible = true;
+                }
+            }
 
+            //reset position of player, enemies, platforms, timer
+            player.Left = 11;
+            player.Top = 508;
+            verticalPlatformOne.Location = new System.Drawing.Point(742, 511);
+            horizontalPlatformOne.Location = new System.Drawing.Point(86, 188);
+            enemyOne.Location = new System.Drawing.Point(164, 36);
+            enemyTwo.Location = new System.Drawing.Point(63, 283);
+            enemyThree.Location = new System.Drawing.Point(476, 431);
+
+            gameTimer.Start();
         }
     }
 }
